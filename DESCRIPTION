@@ -1,0 +1,14 @@
+Package: waruDB
+Type: Package
+Title: Database backend functions for waruPortal
+Version: 0.1.0
+Authors@R: c(
+    person("Tom", "Wilson", , "tpw2@aber.ac.uk", c("aut", "cre")))
+Description: waruDB contains all the functions that are used within waruPortal to access data stored in the MySQL database backend.
+Depends: 
+    RMariaDB,
+    pool,
+    dbplyr
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
