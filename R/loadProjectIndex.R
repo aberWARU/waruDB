@@ -8,7 +8,7 @@
 
 loadProjectIndex <- function(db_connection) {
   projects <-
-    db_connection %>% tbl('ProjectIndex') %>% collect()
+    db_connection %>% dplyr::tbl('ProjectIndex') %>% dplyr::collect()
 
   return(projects)
 }

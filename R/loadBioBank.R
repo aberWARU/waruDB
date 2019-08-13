@@ -8,7 +8,7 @@
 
 loadBioBank <- function(db_connection) {
   biobank <-
-    db_connection %>% tbl('BioBank') %>% collect()
+    db_connection %>% dplyr::tbl('BioBank') %>% dplyr::collect()
 
   return(biobank)
 }

@@ -6,6 +6,7 @@
 #' @param db_connection a `dbPool` or `RMariaDB` database connection
 #' @return a numeric value either 0 (hash already exists) 1 (incoming hash is new)
 #'
+#' @importFrom magrittr %>%
 #' @export
 
 checkSampleTrackerHash <- function(formData, db_connection)
@@ -13,7 +14,7 @@ checkSampleTrackerHash <- function(formData, db_connection)
   incomingHash <- sampleTrackerHash(formData)
 
   sampleTrackerHashVec <-
-    db_connection %>% tbl('SampleTracker') %>% select(hash) %>% pull()
+    db_connection %>% dplyr::tbl('SampleTracker') %>% dplyr::select(hash) %>% dplyr::pull()
 
   if (incomingHash %in% sampleTrackerHashVec) {
     return(0)

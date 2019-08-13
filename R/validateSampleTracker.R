@@ -57,9 +57,9 @@ validateSampleTracker <- function(inFile, db_connection)
 
   StudyChoices <-
     waruDB::loadProjectIndex(db_connection) %>%
-    filter(STATUS == 'Ongoing') %>% select(NAME) %>%
-    arrange() %>%
-    pull()
+    dplyr::filter(STATUS == 'Ongoing') %>% dplyr::select(NAME) %>%
+    dplyr::arrange() %>%
+    dplyr::pull()
 
 
   study_unique <- unique(inFile$study_code)
@@ -81,11 +81,11 @@ validateSampleTracker <- function(inFile, db_connection)
 
   Receivers <-
     waruDB::loadUserData(db_connection) %>%
-    filter(Active == 1) %>%
-    mutate(NAME = stringr::str_c(Forename, ' ', Surname)) %>%
-    arrange(Surname) %>%
-    select(NAME) %>%
-    pull()
+    dplyr::filter(Active == 1) %>%
+    dplyr::mutate(NAME = stringr::str_c(Forename, ' ', Surname)) %>%
+    dplyr::arrange(Surname) %>%
+    dplyr::select(NAME) %>%
+    dplyr::pull()
 
   receiver_unique <- unique(inFile$received_by)
 

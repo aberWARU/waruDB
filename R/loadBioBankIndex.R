@@ -8,7 +8,7 @@
 
 loadBioBankIndex <- function(db_connection) {
   biobank_info <-
-    db_connection %>% tbl('BioBankIndex') %>% collect()
+    db_connection %>% dplyr::tbl('BioBankIndex') %>% dplyr::collect()
 
   return(biobank_info)
 }

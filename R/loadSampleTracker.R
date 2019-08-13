@@ -9,7 +9,7 @@
 loadSampleTracker <- function(db_connection) {
 
   data <-
-    db_connection %>% tbl('SampleTracker') %>% select(
+    db_connection %>% dplyr::tbl('SampleTracker') %>% dplyr::select(
       participant_id,
       sample_id,
       sample_type,
@@ -17,7 +17,7 @@ loadSampleTracker <- function(db_connection) {
       recieved_by,
       tubes,
       study_code
-    ) %>% collect()
+    ) %>% dplyr::collect()
 
   return(data)
 }

@@ -8,7 +8,7 @@
 
 loadUserData <- function(db_connection) {
   users <-
-    db_connection %>% tbl('Users') %>% filter(Active == 1) %>% collect()
+    db_connection %>% dplyr::tbl('Users') %>% dplyr::filter(Active == 1) %>% dplyr::collect()
 
   return(users)
 }

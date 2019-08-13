@@ -8,6 +8,6 @@
 
 loadRecruitmentContacts <- function(db_connection)
   {
-  recruitment_contacts <- db_connection %>% tbl('ParticipantInterest') %>% collect()
+  recruitment_contacts <- db_connection %>% dplyr::tbl('ParticipantInterest') %>% dplyr::collect()
   return(recruitment_contacts)
   }

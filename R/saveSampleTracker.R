@@ -14,6 +14,6 @@ saveSampleTracker <- function(formData, db_connection) {
     paste(formData, collapse = "', '")
   )
 
-  dbExecute(db_connection, query)
+  pool::dbExecute(db_connection, query)
   return(invisible(NULL))
 }
