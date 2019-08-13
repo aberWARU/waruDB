@@ -19,15 +19,17 @@ prepareSampleTracker <- function(formData, username)
 
   formData[['tubes']] <- as.numeric(formData[['tubes']])
 
-  formData <- c(formData, hash = sampleTrackerHash(formData))
+  formData2 <- c(formData[-4], hash = sampleTrackerHash(formData))
 
   if (formData[['dbs_card']] == 'TRUE') {
     DBS_Input <- DBSform(formData)
 
-    return(list(formData, DBS_Input))
+    return(list(formData2, DBS_Input))
 
   } else{
-    return(list(formData))
+    return(list(formData2))
   }
 
 }
+
+
