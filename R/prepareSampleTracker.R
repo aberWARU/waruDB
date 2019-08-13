@@ -15,7 +15,7 @@ prepareSampleTracker <- function(formData, username)
                 userstamp = username)
 
   formData[['date_recieved']] <-
-    as.Date(as.numeric(formData[['date_recieved']]), origin = '1970-01-01')
+    as.character(as.Date(as.numeric(formData[['date_recieved']]), origin = '1970-01-01'))
 
   formData[['tubes']] <- as.numeric(formData[['tubes']])
 
