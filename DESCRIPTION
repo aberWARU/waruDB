@@ -8,8 +8,8 @@ Description: waruDB contains all the functions that are used within waruPortal t
 Depends: 
     magrittr
 Imports:
+    purrr,
     pool,
-    RMariaDB,
     dplyr,
     openssl, 
     stringr,
