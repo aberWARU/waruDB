@@ -12,7 +12,7 @@ prepareSampleTracker(formData, username)
 \item{username}{a character of the current session user (ie, `USER$name`)}
 }
 \value{
-a character for prepared `formData` or a list of urine formData and DBS formData
+a one or two element list of prepared `formData`. One list element for each sample type (Urine & DBS)
 }
 \description{
 Prepare incoming Sample Tracker form data for input into the database
