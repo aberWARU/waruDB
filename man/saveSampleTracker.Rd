@@ -7,9 +7,9 @@
 saveSampleTracker(formData, db_connection)
 }
 \arguments{
-\item{db_connection}{a `dbPool` or `RMariaDB` database connection}
+\item{formData}{the reactive output from `formData`}
 
-\item{data}{the reactive output from `formData`}
+\item{db_connection}{a `dbPool` or `RMariaDB` database connection}
 }
 \description{
 Save data captured from a form entry reactive into the *SampleTracker* table
