@@ -4,7 +4,7 @@
 #'
 #' @param formData a character of the reactive output from the Sample Tracker form entry
 #' @param username a character of the current session user (ie, `USER$name`)
-#' @return a character for prepared `formData` or a list of urine formData and DBS formData
+#' @return a one or two element list of prepared `formData`. One list element for each sample type (Urine & DBS)
 #'
 #' @export
 
@@ -27,7 +27,7 @@ prepareSampleTracker <- function(formData, username)
     return(list(formData, DBS_Input))
 
   } else{
-    return(formData)
+    return(list(formData))
   }
 
 }
