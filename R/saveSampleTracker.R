@@ -10,9 +10,10 @@ saveSampleTracker <- function(formData, db_connection) {
   query <- sprintf(
     "INSERT INTO %s (%s) VALUES ('%s')",
     'SampleTracker',
-    paste(names(data), collapse = ", "),
-    paste(data, collapse = "', '")
+    paste(names(formData), collapse = ", "),
+    paste(formData, collapse = "', '")
   )
 
   dbExecute(db_connection, query)
+  return(invisible(NULL))
 }
