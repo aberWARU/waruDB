@@ -3,7 +3,7 @@
 #' Save data captured from a form entry reactive into the *SampleTracker* table
 #'
 #' @param db_connection a `dbPool` or `RMariaDB` database connection
-#' @param data the reactive output from `formData`
+#' @param formData the reactive output from `formData`
 #' @export
 
 saveSampleTracker <- function(formData, db_connection) {
