@@ -13,8 +13,8 @@ loadSampleTracker <- function(db_connection) {
       participant_id,
       sample_id,
       sample_type,
-      date_recieved,
-      recieved_by,
+      date_received,
+      received_by,
       tubes,
       study_code
     ) %>% dplyr::collect()
