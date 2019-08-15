@@ -28,6 +28,13 @@ validateSampleTracker <- function(inFile, db_connection)
     return(0)
   }
 
+  sampleTrackerHashVec <-
+    db_connection %>% dplyr::tbl('SampleTracker') %>% dplyr::select(hash) %>% dplyr::pull()
+
+  if(isTRUE(any(batchHash2 %in% sampleTrackerHashVec))){
+    return(0)
+  }
+
   if (!is.numeric(inFile$tubes)) {
     return(0)
   }
