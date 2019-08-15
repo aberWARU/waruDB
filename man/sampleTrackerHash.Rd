@@ -16,5 +16,5 @@ a character of the base64 encoded sample hash code
 A simple generation of a hash code which is used to check if an incoming sample already has an existing entry in the database.
 }
 \details{
-The hash code is simply the base64 encoded concatantion of; `Sample ID`, `Date Recieved` and `Sample Type`
+The hash code is simply the base64 encoded concatantion of; `Sample ID`, `Date Received` and `Sample Type`
 }

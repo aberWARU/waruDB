@@ -16,7 +16,7 @@ validateSampleTracker <- function(inFile, db_connection)
   for (i in 1:nrow(inFile)) {
     batchHash[[i]] <-
       paste0(inFile$sample_id[i],
-             inFile$date_recieved[i],
+             inFile$date_received[i],
              inFile$sample_type[i])
   }
 
@@ -40,7 +40,7 @@ validateSampleTracker <- function(inFile, db_connection)
   }
 
 
-  if (!lubridate::is.Date(inFile$date_recieved)) {
+  if (!lubridate::is.Date(inFile$date_received)) {
     return(0)
   }
 
