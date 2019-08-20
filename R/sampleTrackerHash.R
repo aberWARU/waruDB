@@ -10,13 +10,12 @@
 #' @export
 
 sampleTrackerHash <- function(formData)
-  {
-
-  sampleHash <- paste0(formData[['sample_id']],
-                       formData[['date_received']],
-                       formData[['sample_type']])
+{
+  sampleHash <- paste0(formData$sample_id,
+                       formData$date_received,
+                       formData$sample_type)
 
   sampleHashEnc <- openssl::base64_encode(charToRaw(sampleHash))
 
   return(sampleHashEnc)
-  }
+}

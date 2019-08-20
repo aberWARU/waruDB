@@ -10,18 +10,21 @@
 
 prepareSampleTracker <- function(formData, username)
 {
-  formData <- c(formData,
-                timestamp = as.character(Sys.time()),
-                userstamp = username)
 
-  formData[['date_received']] <-
-    as.character(as.Date(as.numeric(formData[['date_received']]), origin = '1970-01-01'))
+  formData <- as.list(formData)
 
-  formData[['tubes']] <- as.numeric(formData[['tubes']])
+  formData$timestamp = as.character(Sys.time())
+  formData$userstamp = username
 
-  formData2 <- c(formData[-4], hash = sampleTrackerHash(formData))
+  formData$date_received <-
+    as.character(as.Date(as.numeric(formData$date_received), origin = '1970-01-01'))
 
-  if (formData[['dbs_card']] == 'TRUE') {
+  formData$tubes <- as.numeric(formData$tubes)
+
+  formData2 <- c(formData, hash = sampleTrackerHash(formData))
+  formData2$dbs_card <- NULL
+
+  if (formData$dbs_card == 'TRUE') {
     DBS_Input <- DBSform(formData)
 
     return(list(formData2, DBS_Input))

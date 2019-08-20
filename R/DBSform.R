@@ -9,17 +9,18 @@
 
 DBSform <- function(formData)
 {
-  if (formData[['dbs_card']] == FALSE) {
+  if (formData$dbs_card == FALSE) {
     return(invisible(NULL))
   }
 
-  formData_DBS <- formData[-4]
-  formData_DBS[['tubes']] <- 1
-  formData_DBS[['sample_type']] <- 'Dried Blood Spot'
+  formData_DBS <- formData
+  formData_DBS$dbs_card <- NULL
+  formData_DBS$tubes <- 1
+  formData_DBS$sample_type <- 'Dried Blood Spot'
 
   formData_DBS_Hash <- sampleTrackerHash(formData_DBS)
 
-  formData_DBS <- c(formData_DBS, hash = formData_DBS_Hash)
+  formData_DBS$hash <- formData_DBS_Hash
 
   return(formData_DBS)
 }
