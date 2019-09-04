@@ -4,13 +4,13 @@
 \alias{validateContactForm}
 \title{Validate Contact Form (Batch Upload)}
 \usage{
-validateContactForm(inFile, db_connection)
+validateContactForm(inFile)
 }
 \arguments{
 \item{inFile}{a `tibble` from the file input}
-
-\item{db_connection}{a `dbPool` or `RMariaDB` database connection
-#' @return a numeric value either 0;validation failed or  1; validation successful}
+}
+\value{
+a numeric value either 0;validation failed or  1; validation successful
 }
 \description{
 Validator function for when batch upload is used instead of standard form entry
