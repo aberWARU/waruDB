@@ -20,6 +20,11 @@ prepareContactForm <- function(formData, username)
   formData$DOB <-
     as.character(as.Date(as.numeric(formData$DOB), origin = '1970-01-01'))
 
+  if(formData$Newsletter == 'TRUE'){
+    formData$Newsletter <- 1
+  }else{
+    formData$Newsletter <- 0
+  }
 
   return(formData)
 
