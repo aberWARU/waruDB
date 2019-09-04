@@ -2,8 +2,8 @@
 
 export(DBSform)
 export(checkSampleTrackerHash)
+export(getDashboardName)
 export(getSourceComponents)
-export(getTabPanelNames)
 export(loadBioBank)
 export(loadBioBankIndex)
 export(loadProjectIndex)
