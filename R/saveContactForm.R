@@ -7,6 +7,7 @@
 #' @export
 
 saveContactForm <- function(formData, db_connection) {
+
   query <- sprintf(
     "INSERT INTO %s (%s) VALUES ('%s')",
     'ParticipantInterest',
