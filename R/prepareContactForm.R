@@ -15,7 +15,7 @@ prepareContactForm <- function(formData, username)
 
   formData$timestamp = as.character(Sys.time())
   formData$userstamp = username
-
+  formData$UID <- uuid::UUIDgenerate()
 
   formData$DOB <-
     as.character(as.Date(as.numeric(formData$DOB), origin = '1970-01-01'))
