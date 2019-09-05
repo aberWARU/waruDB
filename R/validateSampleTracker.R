@@ -4,7 +4,7 @@
 #'
 #' @param inFile a `tibble` from the file input
 #' @param db_connection a `dbPool` or `RMariaDB` database connection
-#' #' @return a numeric value either 0;validation failed or  1; validation successful
+#' @return a numeric value either 0;validation failed or  1; validation successful
 #'
 #' @export
 
