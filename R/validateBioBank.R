@@ -49,7 +49,7 @@ validateBioBank <- function(inFile, db_connection)
     return(0)
   }
 
-  if (!is.numeric(inFile$Aliquots)) {
+  if (!is.numeric(inFile$AliquotsAvailable)) {
     return(0)
   }
 
