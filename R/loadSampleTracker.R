@@ -10,8 +10,8 @@ loadSampleTracker <- function(db_connection) {
 
   data <-
     db_connection %>% dplyr::tbl('SampleTracker') %>% dplyr::select(
-      participant_id,
-      sample_id,
+      ParticipantID,
+      SampleID,
       sample_type,
       date_received,
       received_by,
