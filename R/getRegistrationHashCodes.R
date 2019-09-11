@@ -8,7 +8,7 @@
 getRegistrationHashCodes <- function(db_connection)
 {
   HashCodes <-
-    db_connection %>% dplyr::tbl('ParticipantRegistration') %>% dplyr::select(hash) %>% dplyr::collect()
+    db_connection %>% dplyr::tbl('ParticipantRegistration') %>% dplyr::select(hash) %>% dplyr::pull()
 
   return(HashCodes)
 }
