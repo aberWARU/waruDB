@@ -11,6 +11,9 @@ saveRegistrationForm(formData, db_connection)
 
 \item{db_connection}{a `dbPool` or `RMariaDB` database connection}
 }
+\value{
+a character string of the allocated ParticipantID
+}
 \description{
 Register New Participant
 }
