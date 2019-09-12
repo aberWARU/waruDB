@@ -2,6 +2,7 @@
 #'
 #' @param formData the `list` output from `prepareRegistrationForm`
 #' @param db_connection a `dbPool` or `RMariaDB` database connection
+#' @return a character string of the allocated ParticipantID
 #'
 #' @export
 
@@ -33,6 +34,6 @@ saveRegistrationForm <- function(formData, db_connection)
 
   pool::dbExecute(db_connection, formQuery)
 
-  return(invisible(NULL))
+  return(new_allocation)
 
 }
