@@ -13,8 +13,8 @@ loadSampleTrackerDelete <- function(db_connection) {
       ParticipantID,
       SampleID,
       sample_type,
-      date_recieved,
-      recieved_by,
+      date_received,
+      received_by,
       tubes,
       study_code
     ) %>% dplyr::collect()
