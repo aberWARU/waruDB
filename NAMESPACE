@@ -3,6 +3,7 @@
 export(DBSform)
 export(bioBankHash)
 export(checkSampleTrackerHash)
+export(deleteSampleTracker)
 export(getDashboardName)
 export(getRegistrationHashCodes)
 export(getSourceComponents)
