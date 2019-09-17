@@ -11,7 +11,7 @@
 
 sampleTrackerHash <- function(formData)
 {
-  sampleHash <- paste0(formData$sample_id,
+  sampleHash <- paste0(formData$SampleID,
                        formData$date_received,
                        formData$sample_type)
 
