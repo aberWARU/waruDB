@@ -7,12 +7,17 @@
 
 contactMandatory <- function(inputData)
 {
-  mandatoryValues <-
-    tibble::as_tibble(inputData[[1]]) %>% dplyr::select(Forename,
-                                                        Surname,
-                                                        EmailAddress,
-                                                        DOB)
+  if (length(inputData$DOB) == 0) {
+    inputData$DOB <- ""
+  }
 
+
+  clean_data <- unlist(inputData) %>% data.frame()
+  mandatoryValues <-
+    t(clean_data) %>% tibble::as_tibble() %>% dplyr::select(Forename,
+                                                            Surname,
+                                                            EmailAddress,
+                                                            DOB)
 
   mandatoryCheck <- any(mandatoryValues == "")
 
@@ -23,5 +28,3 @@ contactMandatory <- function(inputData)
   }
 
 }
-
-
