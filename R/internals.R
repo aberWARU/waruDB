@@ -15,3 +15,30 @@ validateEmail <- function(x)
     )
   )
 }
+
+
+globalVariables(
+  c(
+    '.',
+    'AccessLevel',
+    'Active',
+    'COMPONENT',
+    'ContactNumber',
+    'DASHBOARD',
+    'DOB',
+    'EmailAddress',
+    'Forename',
+    'NAME',
+    'ParticipantID',
+    'STATUS',
+    'SampleID',
+    'Surname',
+    'Username',
+    'date_received',
+    'hash',
+    'received_by',
+    'sample_type',
+    'study_code',
+    'tubes'
+  )
+)
