@@ -13,6 +13,8 @@ prepareContactForm <- function(formData, username)
 
   formData <- as.list(formData)
 
+  names(formData) <- gsub('07', '', names(formData))
+
   formData$timestamp <- as.character(Sys.time())
   formData$userstamp <- username
   formData$UID <- uuid::UUIDgenerate()
