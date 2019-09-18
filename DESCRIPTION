@@ -14,7 +14,8 @@ Imports:
     openssl, 
     stringr,
     lubridate,
-    uuid
+    uuid,
+    tibble
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
