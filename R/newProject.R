@@ -26,8 +26,7 @@ newProject <- function(db_connection, projectTibble)
     stop('Validation failed, check column names of input', call. = FALSE)
   }
 
-  RMariaDB::dbWriteTable(db_connection, 'ProjectIndex', projectTibble, append = TRUE)
-
+  pool::dbWriteTable(db_connection, 'ProjectIndex', projectTibble, append = TRUE)
 
   return(invisible(NULL))
 }
