@@ -9,7 +9,7 @@ newProject(db_connection, projectTibble)
 \arguments{
 \item{db_connection}{a `dbPool` or `RMariaDB` database connection}
 
-\item{projectTibble}{a `tibble` of the pfoject information to upload}
+\item{projectTibble}{a `tibble` of the project information to upload}
 }
 \description{
 Add a new project to the Project Index table
